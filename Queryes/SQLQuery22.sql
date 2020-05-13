@@ -1,0 +1,5 @@
+SELECT C.country, C.region, C.city
+From Sales.Customers AS C
+EXCEPT
+SELECT E.country, E.region, E.city
+From HR.Employees AS E;

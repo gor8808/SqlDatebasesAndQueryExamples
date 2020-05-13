@@ -1,0 +1,13 @@
+﻿DROP TABLE IF EXISTS dbo.Orders;
+
+CREATE TABLE dbo.Orders
+(
+	orderId INT NOT NULL
+	CONSTRAINT PK_Orders PRIMARY KEY,
+
+	orderDate DATE NOT NULL
+	CONSTRAINT DFT_orderdate DEFAULT(SYSDATETIME()),
+
+	empid INT NOT NULL,
+	custid VARCHAR(10) NOT NULL
+);
